@@ -105,7 +105,7 @@ map.on('load', function() {
   map.on('click', function (e) {
     var features = map.queryRenderedFeatures(e.point);
     for (i in features) {
-      if (features[i].layer.id == 'us-tract10i-b9dicn') {
+      if (features[i].layer.id == 'CensusTracts') {
         new mapboxgl.Popup()
           .setLngLat(e.lngLat)
           .setHTML('Change Low: ' + features[i].properties.ChngLow2 + '<br/>')
